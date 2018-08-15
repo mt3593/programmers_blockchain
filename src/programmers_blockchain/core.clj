@@ -45,7 +45,7 @@
      :block/time-stamp time-stamp}))
 
 (defn genesis-blockchain []
-  [(next-block (digest/sha-256 "start") "genesis block")])
+  [(next-block (digest/sha-256 "start") "{}")])
 
 (defn add-block
   [blockchain data]
