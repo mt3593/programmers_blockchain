@@ -3,7 +3,7 @@
            [java.security.spec ECGenParameterSpec]
            [org.bouncycastle.jce.provider BouncyCastleProvider]
            [java.util Base64])
-  (:require [programmers-blockchain.core :as block]
+  (:require [programmers-blockchain.blockchain :as block]
             [clojure.spec.alpha :as s]
             [cheshire.core :as json]))
 

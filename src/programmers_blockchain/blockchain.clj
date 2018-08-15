@@ -1,4 +1,4 @@
-(ns programmers-blockchain.core
+(ns programmers-blockchain.blockchain
   (:require [clojure.spec.alpha :as s]
             [clojure.spec.gen.alpha :as gen]
             [digest :as digest]

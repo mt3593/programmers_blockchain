@@ -1,6 +1,6 @@
 (ns programmers-blockchain.wallet-test
   (:require [programmers-blockchain.wallet :refer :all]
-            [programmers-blockchain.core :as block]
+            [programmers-blockchain.blockchain :as block]
             [clojure.test :refer :all]))
 
 (deftest create-wallet

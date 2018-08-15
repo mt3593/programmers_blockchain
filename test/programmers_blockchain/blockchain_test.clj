@@ -1,6 +1,6 @@
-(ns programmers-blockchain.core-test
+(ns programmers-blockchain.blockchain-test
   (:require [clojure.test :refer :all]
-            [programmers-blockchain.core :refer :all]
+            [programmers-blockchain.blockchain :refer :all]
             [clojure.spec.alpha :as s]
             [clojure.spec.test.alpha :as stest]
             [digest :as digest]
@@ -15,13 +15,13 @@
   (= hash
      (digest/sha-256 (str data previous-hash time-stamp nonce))))
 
-(s/fdef programmers-blockchain.core/next-block
+(s/fdef programmers-blockchain.blockchain/next-block
         :args (s/cat :previous-hash :block/previous-hash
                      :data :block/data)
         :fn #(valid-block? (:ret %))
         :ret :block/block)
 
-(s/fdef programmers-blockchain.core/add-block
+(s/fdef programmers-blockchain.blockchain/add-block
         :args (s/cat :blockchain :block/blockchain
                      :data :block/data)
         :fn #(every? valid-block? (:ret %))
